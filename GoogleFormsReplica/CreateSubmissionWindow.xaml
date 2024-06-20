@@ -1,0 +1,60 @@
+﻿<Window x:Class="GoogleFormsReplica.CreateSubmissionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="John Doe, Slidely Task 2 - Create Submission" Height="400" Width="400"
+        KeyDown="Window_KeyDown">
+    <Window.Resources>
+        <!-- Define styles for buttons and text fields -->
+        <Style x:Key="YellowButton" TargetType="Button">
+            <Setter Property="Background" Value="#FFFAE6A0"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style x:Key="BlueButton" TargetType="Button">
+            <Setter Property="Background" Value="#FFB3D9FF"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style x:Key="EditableTextField" TargetType="TextBox">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+        </Style>
+        <Style x:Key="ReadOnlyTextField" TargetType="TextBox">
+            <Setter Property="Background" Value="#FFD3D3D3"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Labels and TextBoxes for each field -->
+        <Label Grid.Row="0" Grid.Column="0" Content="Name" Margin="10" FontSize="14"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="txtName" Margin="10" Style="{StaticResource EditableTextField}"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Email" Margin="10" FontSize="14"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="txtEmail" Margin="10" Style="{StaticResource EditableTextField}"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Phone Num" Margin="10" FontSize="14"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="txtPhoneNumber" Margin="10" Style="{StaticResource EditableTextField}"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Github Link For Task 2" Margin="10" FontSize="14"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Name="txtGithubLink" Margin="10" Style="{StaticResource EditableTextField}"/>
+
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Name="btnToggleStopwatch" Content="TOGGLE STOPWATCH (CTRL + T)" Width="200" Height="30" HorizontalAlignment="Center" Margin="10" Click="btnToggleStopwatch_Click" Style="{StaticResource YellowButton}"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Name="txtStopwatchTime" Margin="153,348,0,-328" HorizontalAlignment="Left" Style="{StaticResource ReadOnlyTextField}"/>
+
+        <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Name="btnSubmit" Content="SUBMIT (CTRL + S)" Width="351" Height="30" HorizontalAlignment="Center" Margin="0,55,0,55" Click="btnSubmit_Click" Style="{StaticResource BlueButton}"/>
+    </Grid>
+</Window>

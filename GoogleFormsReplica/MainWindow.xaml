@@ -1,0 +1,10 @@
+﻿<Window x:Class="GoogleFormsReplica.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="John Doe, Slidely Task 2 - Slidely Form App" Height="350" Width="525">
+    <Grid>
+        <Button Name="btnViewSubmissions" Content="VIEW SUBMISSIONS (CTRL + V)" Width="230" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-30,0,30" Background="Yellow" FontWeight="Bold" Click="btnViewSubmissions_Click" RenderTransformOrigin="0.495,0.918"/>
+        <Button Name="btnCreateNewSubmission" Content="CREATE NEW SUBMISSION (CTRL + N)" Width="230" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,30,0,0" Background="LightBlue" FontWeight="Bold" Click="btnCreateNewSubmission_Click"/>
+    </Grid>
+</Window>
+
